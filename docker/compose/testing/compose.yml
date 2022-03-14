@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  mongodb_container_testing:
+    image: mongo:5.0.6
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+    ports:
+      - 27018:27017
+    volumes:
+      - mongodb_data_container_testing:/data/db
+
+volumes:
+  mongodb_data_container_testing:

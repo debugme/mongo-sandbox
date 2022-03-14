@@ -1,0 +1,22 @@
+{
+  "name": "mongo-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:database:development": "cd docker/compose/development;docker-compose up -d;cd ../../..",
+    "start:database:testing": "cd docker/compose/testing;docker-compose up -d;cd ../../..",
+    "stop:database:development": "cd docker/compose/development;docker-compose stop",
+    "stop:database:testing": "cd docker/compose/testing;docker-compose stop",
+    "shell:database:development": "mongo admin -u root -p rootpassword --port 27017",
+    "shell:database:testing": "mongo admin -u root -p rootpassword --port 27018"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mongodb": "^4.4.1"
+  },
+  "type": "module"
+}
